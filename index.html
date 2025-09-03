@@ -9,59 +9,12 @@
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#007bff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
-    <!--end::Accessibility Meta Tags-->
-    <!--begin::Primary Meta Tags-->
-    <meta name="title" content="AdminLTE v4 | Dashboard" />
-    <meta name="author" content="ColorlibHQ" />
-    <meta
-      name="description"
-      content="AdminLTE is a Free Bootstrap 5 Admin Dashboard, 30 example pages using Vanilla JS. Fully accessible with WCAG 2.1 AA compliance."
-    />
-    <meta
-      name="keywords"
-      content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, colorlibhq, colorlibhq dashboard, colorlibhq admin dashboard, accessible admin panel, WCAG compliant"
-    />
-    <!--end::Primary Meta Tags-->
-    <!--begin::Accessibility Features-->
-    <!-- Skip links will be dynamically added by accessibility.js -->
     <meta name="supported-color-schemes" content="light dark" />
     <link rel="preload" href="./css/adminlte.css" as="style" />
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
-    <!--end::Accessibility Features-->
-    <!--begin::Fonts-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"
-      integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q="
-      crossorigin="anonymous"
-      media="print"
-      onload="this.media='all'"
-    />
-    <!--end::Fonts-->
-    <!--begin::Third Party Plugin(OverlayScrollbars)-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/styles/overlayscrollbars.min.css"
-      crossorigin="anonymous"
-    />
-    <!--end::Third Party Plugin(OverlayScrollbars)-->
-    <!--begin::Third Party Plugin(Bootstrap Icons)-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-      crossorigin="anonymous"
-    />
-    <!--end::Third Party Plugin(Bootstrap Icons)-->
-    <!--begin::Required Plugin(AdminLTE)-->
     <link rel="stylesheet" href="./css/adminlte.css" />
-    <!--end::Required Plugin(AdminLTE)-->
-    <!-- apexcharts -->
-    
+    <link href="./css/select2.css" rel="stylesheet" />
+    <link href="./css/datepicker.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/bootstrap-icons/font/bootstrap-icons.css">
   </head>
 
   <!--end::Head-->
@@ -116,8 +69,8 @@
                 
                 <!--begin::Menu Footer-->
                 <li class="user-footer">
-                  <a href="change-password.html" class="btn btn-default btn-flat">Change Password</a>
-                  <a href="#" class="btn btn-danger btn-flat float-end">Sign out</a>
+                  <a href="change-password.html" class="btn btn-default btn-flat">ປ່ຽນລະຫັດຜ່ານ</a>
+                  <a href="#" class="btn btn-danger btn-flat float-end"> ອອກຈາກລະບົບ </a>
                 </li>
                 <!--end::Menu Footer-->
               </ul>
@@ -160,7 +113,7 @@
             >
               <li class="nav-item menu-open">
                 <a href="#" class="nav-link active">
-                 <i class="nav-icon fa-solid fa-house"></i>
+                 <i class="nav-icon bi bi-house-fill"></i>
                   <p>
                     Dashboard
                     <i class="nav-arrow gy-4 bi bi-chevron-right"></i>
@@ -169,19 +122,19 @@
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
                     <a href="./index.html" class="nav-link active">
-                      <i class="nav-icon fa-solid fa-bullseye"></i>
+                      <i class="nav-icon bi bi-bullseye"></i>
                       <p>ສະພາບການເກັບລາຍຮັບ</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="./index2.html" class="nav-link">
-                      <i class="nav-icon fa-solid fa-file"></i>
+                      <i class="nav-icon bi bi-file-earmark-fill"></i>
                       <p>ສະຫຼຸບການຈັດຕັ້ງປະຕິບັດ</p>
                     </a>
                   </li>
                   <li class="nav-item">
                     <a href="./index3.html" class="nav-link">
-                      <i class=" nav-icon fa-solid fa-paper-plane"></i>
+                      <i class=" nav-icon bi bi-send-fill"></i>
                       <p>ຄ່າທໍານຽມທາງ</p>
                     </a>
                   </li>
@@ -204,11 +157,12 @@
             <!--begin::row gy-4-->
             <div class="row gy-4 g-2">
               <div class="col-12 col-lg-2">
-                <select class="form-select select2 mySelect" >
+                <select class="form-control select2 mySelect last-selected" >
                   <option value="1">2021</option>
                   <option value="2">2022</option>
                   <option value="3">2023</option>
                   <option value="4">2024</option>
+                  <option value="5" selected>2025</option>
                 </select>
               </div>
               <div class="col-12 col-md-2">
@@ -377,7 +331,7 @@
                     <div class="card p-2 rounded-3 text-bg-info">
                       <div class="inner d-flex justify-content-between align-items-center py-3">
                         <div><i class="bi bi-megaphone-fill fs-1 opacity-25 text-black"></i></div>
-                        <div>
+                        <div class="text-white">
                           <h4 class="p-0 m-0 text-end">0</h4>
                           <p class="p-0 m-0 text-end fs-6"> ພາສີນໍາເຂົ້າ </p>
                         </div>
@@ -388,7 +342,7 @@
                     <div class="card p-2 rounded-3 text-bg-info">
                       <div class="inner d-flex justify-content-between align-items-center py-3">
                         <div><i class="bi bi-megaphone-fill fs-1 opacity-25 text-black"></i></div>
-                        <div>
+                        <div class="text-white">
                           <h4 class="p-0 m-0 text-end">0</h4>
                           <p class="p-0 m-0 text-end fs-6"> ພາສີສົ່ງອອກ </p>
                         </div>
@@ -399,7 +353,7 @@
                     <div class="card p-2 rounded-3 text-bg-info">
                       <div class="inner d-flex justify-content-between align-items-center py-3">
                         <div><i class="bi bi-megaphone-fill fs-1 opacity-25 text-black"></i></div>
-                        <div>
+                        <div class="text-white">
                           <h4 class="p-0 m-0 text-end">0</h4>
                           <p class="p-0 m-0 text-end fs-6"> ຄ່າທໍານຽມຕ່າງໆ </p>
                         </div>
@@ -470,54 +424,54 @@
                   <h3 class="card-title">ສະຫຼຸບລາຍຮັບຕາມແຜນງົບ</h3>
                 </div>
                 <div class="card-body">
-                    <div class="row gy-4">
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-danger">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ແຜນລາຍຮັບປະຈໍາປີ </p>
-                            </div>
+                  <div class="row gy-4">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-danger">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-bar-chart fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ແຜນລາຍຮັບປະຈໍາປີ </p>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-primary">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-diagram-3-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບປະຈໍາວັນ </p>
-                            </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-primary">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-diagram-3-fill fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບປະຈໍາວັນ </p>
                           </div>
                         </div>
                       </div>
+                    </div>
 
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-success">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບທັງໝົດ </p>
-                            </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-success">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບທັງໝົດ </p>
                           </div>
                         </div>
                       </div>
-                      
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-warning">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-cart-fill fs-1 opacity-25 text-black"></i></div>
-                            <div class="text-white">
-                              <h4 class="p-0 m-0 text-end">0%</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
-                            </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 bg-warning">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                          <div class="text-white">
+                            <h4 class="p-0 m-0 text-end">0%</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
                           </div>
                         </div>
                       </div>
-                  </div>
+                    </div>
+                </div>
                 </div>
               </div>
               <div class="summary">
@@ -528,51 +482,51 @@
                   <div class="card-body">
                     <div class="row gy-4 " style="display: none;">
                       <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-danger">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ແຜນລາຍຮັບປະຈໍາປີ </p>
-                            </div>
+                      <div class="card p-2 rounded-3 text-bg-danger">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-bar-chart fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ແຜນລາຍຮັບປະຈໍາປີ </p>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-primary">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-diagram-3-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບປະຈໍາວັນ </p>
-                            </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-primary">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-diagram-3-fill fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບປະຈໍາວັນ </p>
                           </div>
                         </div>
                       </div>
+                    </div>
 
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-success">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບທັງໝົດ </p>
-                            </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-success">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບທັງໝົດ </p>
                           </div>
                         </div>
                       </div>
-                      
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-warning">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-cart-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h5 class="p-0 m-0 text-end">0%</h5>
-                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
-                            </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 bg-warning">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                          <div class="text-white">
+                            <h4 class="p-0 m-0 text-end">0%</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
                           </div>
                         </div>
                       </div>
+                    </div>
                     </div>
                   </div>
 
@@ -584,51 +538,51 @@
                   <div class="card-body">
                       <div class="row gy-4" style="display: none;">
                       <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-danger">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ແຜນລາຍຮັບປະຈໍາປີ </p>
-                            </div>
+                      <div class="card p-2 rounded-3 text-bg-danger">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-bar-chart fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ແຜນລາຍຮັບປະຈໍາປີ </p>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-primary">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-diagram-3-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບປະຈໍາວັນ </p>
-                            </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-primary">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-diagram-3-fill fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບປະຈໍາວັນ </p>
                           </div>
                         </div>
                       </div>
+                    </div>
 
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-success">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບທັງໝົດ </p>
-                            </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-success">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບທັງໝົດ </p>
                           </div>
                         </div>
                       </div>
-                      
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-warning">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-cart-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h5 class="p-0 m-0 text-end">0%</h5>
-                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
-                            </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 bg-warning">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                          <div class="text-white">
+                            <h4 class="p-0 m-0 text-end">0%</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
                           </div>
                         </div>
                       </div>
+                    </div>
                     </div>
                   </div>
 
@@ -640,51 +594,51 @@
                   <div class="card-body">
                       <div class="row gy-4" style="display: none;">
                       <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-danger">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ແຜນລາຍຮັບປະຈໍາປີ </p>
-                            </div>
+                      <div class="card p-2 rounded-3 text-bg-danger">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-bar-chart fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ແຜນລາຍຮັບປະຈໍາປີ </p>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-primary">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-diagram-3-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບປະຈໍາວັນ </p>
-                            </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-primary">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-diagram-3-fill fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບປະຈໍາວັນ </p>
                           </div>
                         </div>
                       </div>
+                    </div>
 
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-success">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບທັງໝົດ </p>
-                            </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-success">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບທັງໝົດ </p>
                           </div>
                         </div>
                       </div>
-                      
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-warning">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-cart-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h5 class="p-0 m-0 text-end">0%</h5>
-                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
-                            </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 bg-warning">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                          <div class="text-white">
+                            <h4 class="p-0 m-0 text-end">0%</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
                           </div>
                         </div>
                       </div>
+                    </div>
                     </div>
                   </div>
 
@@ -696,51 +650,51 @@
                   <div class="card-body">
                       <div class="row gy-4 " style="display: none;">
                       <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-danger">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ແຜນລາຍຮັບປະຈໍາປີ </p>
-                            </div>
+                      <div class="card p-2 rounded-3 text-bg-danger">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-bar-chart fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ແຜນລາຍຮັບປະຈໍາປີ </p>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-primary">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-diagram-3-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບປະຈໍາວັນ </p>
-                            </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-primary">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-diagram-3-fill fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບປະຈໍາວັນ </p>
                           </div>
                         </div>
                       </div>
+                    </div>
 
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-success">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບທັງໝົດ </p>
-                            </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-success">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບທັງໝົດ </p>
                           </div>
                         </div>
                       </div>
-                      
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-warning">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-cart-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h5 class="p-0 m-0 text-end">0%</h5>
-                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
-                            </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 bg-warning">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                          <div class="text-white">
+                            <h4 class="p-0 m-0 text-end">0%</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
                           </div>
                         </div>
                       </div>
+                    </div>
                     </div>
                   </div>
 
@@ -752,51 +706,51 @@
                   <div class="card-body">
                       <div class="row gy-4 " style="display: none;">
                       <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-danger">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ແຜນລາຍຮັບປະຈໍາປີ </p>
-                            </div>
+                      <div class="card p-2 rounded-3 text-bg-danger">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-bar-chart fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ແຜນລາຍຮັບປະຈໍາປີ </p>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-primary">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-diagram-3-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບປະຈໍາວັນ </p>
-                            </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-primary">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-diagram-3-fill fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບປະຈໍາວັນ </p>
                           </div>
                         </div>
                       </div>
+                    </div>
 
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-success">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບທັງໝົດ </p>
-                            </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-success">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບທັງໝົດ </p>
                           </div>
                         </div>
                       </div>
-                      
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-warning">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-cart-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h5 class="p-0 m-0 text-end">0%</h5>
-                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
-                            </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 bg-warning">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                          <div class="text-white">
+                            <h4 class="p-0 m-0 text-end">0%</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
                           </div>
                         </div>
                       </div>
+                    </div>
                     </div>
                   </div>
 
@@ -808,51 +762,51 @@
                   <div class="card-body">
                       <div class="row gy-4 " style="display: none;">
                       <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-danger">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ແຜນລາຍຮັບປະຈໍາປີ </p>
-                            </div>
+                      <div class="card p-2 rounded-3 text-bg-danger">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-bar-chart fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ແຜນລາຍຮັບປະຈໍາປີ </p>
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-primary">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-diagram-3-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບປະຈໍາວັນ </p>
-                            </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-primary">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-diagram-3-fill fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບປະຈໍາວັນ </p>
                           </div>
                         </div>
                       </div>
+                    </div>
 
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-success">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h4 class="p-0 m-0 text-end">0</h4>
-                              <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບທັງໝົດ </p>
-                            </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-success">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h4 class="p-0 m-0 text-end">0</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບທັງໝົດ </p>
                           </div>
                         </div>
                       </div>
-                      
-                      <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="card p-2 rounded-3 text-bg-warning">
-                          <div class="inner d-flex justify-content-between align-items-center py-3">
-                            <div><i class="bi bi-cart-fill fs-1 opacity-25 text-black"></i></div>
-                            <div>
-                              <h5 class="p-0 m-0 text-end">0%</h5>
-                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
-                            </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 bg-warning">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                          <div class="text-white">
+                            <h4 class="p-0 m-0 text-end">0%</h4>
+                            <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
                           </div>
                         </div>
                       </div>
+                    </div>
                     </div>
                   </div>
 
@@ -884,7 +838,7 @@
                         <div class="col-lg-6 col-12">
                           <div class="card p-2 rounded-3 text-bg-secondary">
                             <div class="inner d-flex justify-content-between align-items-center py-3">
-                              <div><i class="bi bi-cart-fill fs-1 opacity-25 text-black"></i></div>
+                              <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
                               <div>
                                 <h4 class="p-0 m-0 text-end">0</h4>
                                 <p class="p-0 m-0 text-end fs-6"> ຄ່າທໍານຽມ - ທັງໝົດ </p>
@@ -902,10 +856,10 @@
                   <div class="card-body">
                       <div class="row gy-4">
                         <div class="col-lg-6 col-12">
-                          <div class="card p-2 rounded-3 text-bg-primary">
+                          <div class="card p-2 rounded-3 bg-primary">
                             <div class="inner d-flex justify-content-between align-items-center py-3">
                               <div><i class="bi bi-cart-fill fs-1 opacity-25 text-black"></i></div>
-                              <div>
+                              <div class="text-white">
                                 <h4 class="p-0 m-0 text-end">0</h4>
                                 <p class="p-0 m-0 text-end fs-6">ຄ່າບໍລິການ - ປະຈໍາວັນ</p>
                               </div>
@@ -915,7 +869,7 @@
                         <div class="col-lg-6 col-12">
                           <div class="card p-2 rounded-3 text-bg-secondary">
                             <div class="inner d-flex justify-content-between align-items-center py-3">
-                              <div><i class="bi bi-cart-fill fs-1 opacity-25 text-black"></i></div>
+                              <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
                               <div>
                                 <h4 class="p-0 m-0 text-end">0</h4>
                                 <p class="p-0 m-0 text-end fs-6"> ຄ່າທໍານຽມ - ທັງໝົດ </p>
@@ -933,10 +887,10 @@
                   <div class="card-body">
                       <div class="row gy-4">
                         <div class="col-lg-6 col-12">
-                          <div class="card p-2 rounded-3 text-bg-primary">
+                          <div class="card p-2 rounded-3 bg-primary">
                             <div class="inner d-flex justify-content-between align-items-center py-3">
                               <div><i class="bi bi-cart-fill fs-1 opacity-25 text-black"></i></div>
-                              <div>
+                              <div class="text-white">
                                 <h4 class="p-0 m-0 text-end">0</h4>
                                 <p class="p-0 m-0 text-end fs-6">ຄ່າບໍລິການ - ປະຈໍາວັນ</p>
                               </div>
@@ -946,7 +900,7 @@
                         <div class="col-lg-6 col-12">
                           <div class="card p-2 rounded-3 text-bg-secondary">
                             <div class="inner d-flex justify-content-between align-items-center py-3">
-                              <div><i class="bi bi-cart-fill fs-1 opacity-25 text-black"></i></div>
+                              <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
                               <div>
                                 <h4 class="p-0 m-0 text-end">0</h4>
                                 <p class="p-0 m-0 text-end fs-6"> ຄ່າທໍານຽມ - ທັງໝົດ </p>
@@ -1049,72 +1003,19 @@
       <!--end::App Main-->
       
     </div>
-    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
-    <script src="https://code.highcharts.com/mapdata/countries/la/la-all.js"></script>
-    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/treemap.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/treemap.js"></script>
-    <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
-
-
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/brow gy-4ser/overlayscrollbars.brow gy-4ser.es6.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(popperjs for Bootstrap 5)-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
+    <script src="./highchart/highmaps.js"></script>
+    <script src="./highchart/la-all.js"></script>
+    <script src="./highchart/exporting.js"></script>
+    <script src="./highchart/highcharts.js"></script>
+    <script src="./highchart/treemap.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/select2.min.js"></script>
+    <script src="./js/bootstrap-datepicker.min.js"></script>
+    <script src="./js/popper.min.js" crossorigin="anonymous"></script>
+    <script src="./js/bootstrap.min.js" crossorigin="anonymous"></script>
     <script src="./js/adminlte.js"></script>
-    <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
-    <script>
-      const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
-      const Default = {
-        scrollbarTheme: 'os-theme-light',
-        scrollbarAutoHide: 'leave',
-        scrollbarClickScroll: true,
-      };
-      document.addEventListener('DOMContentLoaded', function () {
-        const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
-        if (sidebarWrapper && OverlayScrollbarsGlobal?.OverlayScrollbars !== undefined) {
-          OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
-            scrollbars: {
-              theme: Default.scrollbarTheme,
-              autoHide: Default.scrollbarAutoHide,
-              clickScroll: Default.scrollbarClickScroll,
-            },
-          });
-        }
-      });
-    </script>
-    <!--end::OverlayScrollbars Configure-->
-    <!-- OPTIONAL SCRIPTS -->
-    <!-- sortablejs -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"
-      crossorigin="anonymous"
-    ></script>
-    <!-- sortablejs -->
-    <script>
-      new Sortable(document.querySelector('.connectedSortable'), {
-        group: 'shared',
-        handle: '.card-header',
-      });
-
-      const cardHeaders = document.querySelectorAll('.connectedSortable .card-header');
-      cardHeaders.forEach((cardHeader) => {
-        cardHeader.style.cursor = 'move';
-      });
-    </script>
+    
+    
 <script>
 (async () => {
     const topology = await fetch(
@@ -1845,34 +1746,15 @@ Highcharts.chart('treemap-container', {
     }]
 });
 </script>
-    <!-- jsvectormap -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/js/jsvectormap.min.js"
-      integrity="sha256-/t1nN2956BT869E6H4V1dnt0X5pAQHPytli+1nTZm2Y="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/maps/world.js"
-      integrity="sha256-XPpPaZlU8S/HWf7FZLAncLg2SAkP8ScUTII89x9D3lY="
-      crossorigin="anonymous"
-    ></script>
-    
-
-
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <!-- Include Select2 CSS + JS -->
-  
-  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
   <script>
   $(document).ready(function() {
+
     
     $('.mySelect').select2({
       allowclear: true,
       width: '100%',
     });
+    
   });
 </script>
 
