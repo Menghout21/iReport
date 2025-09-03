@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+  <!--begin::Head-->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MOF iReport</title>
+    <!--begin::Accessibility Meta Tags-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#007bff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
+    <!--end::Accessibility Meta Tags-->
+    <!--begin::Primary Meta Tags-->
+    <meta name="title" content="AdminLTE v4 | Dashboard" />
+    <meta name="author" content="ColorlibHQ" />
+    <meta
+      name="description"
+      content="AdminLTE is a Free Bootstrap 5 Admin Dashboard, 30 example pages using Vanilla JS. Fully accessible with WCAG 2.1 AA compliance."
+    />
+    <meta
+      name="keywords"
+      content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, colorlibhq, colorlibhq dashboard, colorlibhq admin dashboard, accessible admin panel, WCAG compliant"
+    />
+    <!--end::Primary Meta Tags-->
+    <!--begin::Accessibility Features-->
+    <!-- Skip links will be dynamically added by accessibility.js -->
+    <meta name="supported-color-schemes" content="light dark" />
+    <link rel="preload" href="./css/adminlte.css" as="style" />
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/css/bootstrap-datepicker.min.css" rel="stylesheet"/>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+
+
+    <!--end::Accessibility Features-->
+    <!--begin::Fonts-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"
+      integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q="
+      crossorigin="anonymous"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!--end::Fonts-->
+    <!--begin::Third Party Plugin(OverlayScrollbars)-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/styles/overlayscrollbars.min.css"
+      crossorigin="anonymous"
+    />
+    <!--end::Third Party Plugin(OverlayScrollbars)-->
+    <!--begin::Third Party Plugin(Bootstrap Icons)-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+      crossorigin="anonymous"
+    />
+    <!--end::Third Party Plugin(Bootstrap Icons)-->
+    <!--begin::Required Plugin(AdminLTE)-->
+    <link rel="stylesheet" href="./css/adminlte.css" />
+    <!--end::Required Plugin(AdminLTE)-->
+    <!-- apexcharts -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.css"
+      integrity="sha256-4MX+61mt9NVvvuPjUWdUdyfZfxSB1/Rf9WtqRHgG5S0="
+      crossorigin="anonymous"
+    />
+    <!-- jsvectormap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css"
+      integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4="
+      crossorigin="anonymous"
+    />
+  </head>
+  
+
+  <!--end::Head-->
+  <!--begin::Body-->
+  <body class="layout-fixed sidebar-expand-lg sidebar-open bg-body-tertiary">
+    <!--begin::App Wrapper-->
+    <div class="app-wrapper">
+      <!--begin::Header-->
+      <nav class="app-header navbar navbar-expand bg-body">
+        <!--begin::Container-->
+        <div class="container-fluid">
+          <!--begin::Start Navbar Links-->
+          <ul class="navbar-nav" style="width:100%">
+            <li class="nav-item">
+              <a class="nav-link d-flex justify-content-center align-items-center text-white" data-lte-toggle="sidebar" href="#" role="button">
+                <i class="bi bi-list fs-4"></i>
+              </a>
+            </li>
+            <li class="d-none d-md-block" style="width:85%; display:flex; align-items:center; justify-content:center;">
+              <p class="marquee mb-0">
+                <span>ລະບົບສະຫຼຸບການຈັດຕັ້ງປະຕິບັດແຜນງົບປະມານແຫ່ງລັດ</span>
+              </p>
+            </li>
+
+          <!--end::Start Navbar Links-->
+          <!--begin::End Navbar Links-->
+          <ul class="navbar-nav ms-auto" >
+            <!--begin::User Menu Dropdown-->
+            <li class="nav-item dropdown user-menu">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                <img
+                  src="./assets/img/user2-160x160.jpg"
+                  class="user-image rounded-circle shadow"
+                  alt="User Image"
+                />
+                <span class="d-none d-md-inline text-white">Alexander Pierce</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end float-end">
+                <!--begin::User Image-->
+                <li class="user-header text-bg-primary">
+                  <img
+                    src="./assets/img/user2-160x160.jpg"
+                    class="rounded-circle shadow"
+                    alt="User Image"
+                  />
+                  <p>
+                    Alexander Pierce - Web Developer
+                    <small>Member since Nov. 2023</small>
+                  </p>
+                </li>
+                <!--end::User Image-->
+                
+                <!--begin::Menu Footer-->
+                <li class="user-footer">
+                  <a href="change-password.html" class="btn btn-default btn-flat">Change Password</a>
+                  <a href="#" class="btn btn-danger btn-flat float-end">Sign out</a>
+                </li>
+                <!--end::Menu Footer-->
+              </ul>
+            </li>
+            <!--end::User Menu Dropdown-->
+          </ul>
+          <!--end::End Navbar Links-->
+        </div>
+        <!--end::Container-->
+      </nav>
+      <!--end::Header-->
+      <!--begin::Sidebar-->
+      <aside class="app-sidebar bg-body-secondary " data-bs-theme="dark">
+        <!--begin::Sidebar Brand-->
+        <div class="sidebar-brand">
+          <!--begin::Brand Link-->
+          <a href="./index.html" class="brand-link">
+            <!--begin::Brand Image-->
+            <img
+              src="./assets/img/lao_logo.png"
+              alt="loa logo"
+              class="brand-image"
+            />
+            <!--end::Brand Image-->
+          </a>
+          <!--end::Brand Link-->
+        </div>
+        <!--end::Sidebar Brand-->
+        <!--begin::Sidebar Wrapper-->
+        <div class="sidebar-wrapper">
+          <nav class="mt-2">
+            <!--begin::Sidebar Menu-->
+            <ul
+              class="nav sidebar-menu flex-column"
+              data-lte-toggle="treeview"
+              role="navigation"
+              aria-label="Main navigation"
+              data-accordion="false"
+              id="navigation"
+            >
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
+                 <i class="nav-icon fa-solid fa-house"></i>
+                  <p>
+                    Dashboard
+                    <i class="nav-arrow gy-4 bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./index.html" class="nav-link ">
+                      <i class="nav-icon fa-solid fa-bullseye"></i>
+                      <p>ສະພາບການເກັບລາຍຮັບ</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index2.html" class="nav-link">
+                      <i class="nav-icon fa-solid fa-file"></i>
+                      <p>ສະຫຼຸບການຈັດຕັ້ງປະຕິບັດ</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index3.html" class="nav-link active">
+                      <i class=" nav-icon fa-solid fa-paper-plane"></i>
+                      <p>ຄ່າທໍານຽມທາງ</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              
+            </ul>
+            <!--end::Sidebar Menu-->
+          </nav>
+        </div>
+        <!--end::Sidebar Wrapper-->
+      </aside>
+      <!--end::Sidebar-->
+      <!--begin::App Main-->
+      <main class="app-main">
+        <!--begin::App Content Header-->
+        <div class="app-content-header">
+          <!--begin::Container-->
+          <div class="container-fluid">
+            <!--begin::row gy-4-->
+            <div class="row g-4">
+              <div class="col-12 col-lg-3">
+                <div class="row gy-4">
+                  <div class="col-12 col-lg-4">
+                    <select class="form-select select2 mySelect" >
+                      <option value="1">2021</option>
+                      <option value="2">2022</option>
+                      <option value="3">2023</option>
+                      <option value="4">2024</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-lg-8">
+                    <select class="form-select select2 mySelect" >
+                      <option value="">-- ເລືອກຂັ້ນ --</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-3">
+                <select class="form-select select2 mySelect" >
+                  <option value="" selected="">-- ເລືອກຮູບແບບການສັງລວມຕົວເລກ --</option>
+                </select>
+              </div>
+              <div class="col-12 col-lg-3">
+                <select class="form-select select2 mySelect" >
+                  <option value="" selected="">-- ເລືອກແຂວງ --</option>
+                </select>
+              </div>
+              <div class="col-12 col-lg-3">
+                <select class="form-select select2 mySelect" >
+                  <option value="" selected="">-- ເລືອກແຂວງ --</option>
+                </select>
+              </div>
+              <div class="col-12 col-lg-3">
+                <input type="text" class="datepicker form-control" placeholder="ວັນທີອອກໃບແຈ້ງ - ເລີ່ມ...">
+              </div>
+              <div class="col-12 col-lg-3">
+                <input type="text" class="datepicker form-control" placeholder="ວັນທີອອກໃບແຈ້ງ - ສິ້ນສຸດ...">
+              </div>
+              <div class="col-12 col-lg-3">
+                <input type="text" class="datepicker form-control" placeholder="ວັນທີຮັບເງິນ - ເລີ່ມ...">
+              </div>
+              <div class="col-12 col-lg-3">
+                <input type="text" class="datepicker form-control" placeholder="ວັນທີຮັບເງິນ - ສິ້ນສຸດ...">
+              </div>
+            </div>
+            <div class="row g-4 mt-1">
+                <div class="col-lg-3 col-12">
+                  <div class="card p-2 rounded-3 text-bg-danger">
+                    <div class="inner d-flex justify-content-between align-items-center py-3">
+                      <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
+                      <div>
+                        <h5 class="p-0 m-0 text-end">65</h5>
+                        <p class="p-0 m-0 text-end fs-6">ແຜນລາຍຮັບຄ່າທໍານຽມທາງປະຈໍາປີ</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-12">
+                  <div class="card p-2 rounded-3 text-bg-info">
+                    <div class="inner d-flex justify-content-between align-items-center py-3">
+                      <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                      <div class="text-light">
+                        <h5 class="p-0 m-0 text-end">650,607,079,797,079,797 $</h5>
+                        <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບຄ່າທໍານຽມທາງປະຈໍາວັນ </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-3 col-12">
+                  <div class="card p-2 rounded-3 text-bg-primary">
+                    <div class="inner d-flex justify-content-between align-items-center py-3">
+                      <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                      <div>
+                        <h5 class="p-0 m-0 text-end">0.00%</h5>
+                        <p class="p-0 m-0 text-end fs-6"> ລາຍຮັບຄ່າທໍານຽມທາງທັງໝົດ </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-12">
+                  <div class="card p-2 rounded-3 text-bg-primary">
+                    <div class="inner d-flex justify-content-between align-items-center py-3">
+                      <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                      <div>
+                        <h5 class="p-0 m-0 text-end">0.00%</h5>
+                        <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="card mt-3 p-3">
+              <div class="row">
+                <div class="col-12 col-lg-3">
+                    <select class="form-select select2 mySelect" >
+                      <option value="" selected="">ຮູບແບບແຜນທີ່: ເບິ່ງແຂວງ</option>
+                    </select>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="row gy-4 mt-1">
+                  <div class="col-lg-6 col-12 connectedSortable">
+                    <div>
+                      <div id="map-chart"></div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-12 connectedSortable">
+                    <div>
+                      <div id="area-chart"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!--end::Container-->
+        </div>
+        <!--end::App Content Header-->
+        <!--begin::App Content-->
+        <div class="app-content">
+          <!--begin::Container-->
+          <div class="container-fluid">
+
+          </div>
+          <!--end::Container-->
+        </div>
+        <!--end::App Content-->
+      </main>
+      <!--end::App Main-->
+      
+    </div>
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/mapdata/countries/la/la-all.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/treemap.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/treemap.js"></script>
+    <!-- <script src="https://code.highcharts.com/modules/exporting.js"></script> -->
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/brow gy-4ser/overlayscrollbars.brow gy-4ser.es6.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--end::Third Party Plugin(OverlayScrollbars)--><!--begin::Required Plugin(popperjs for Bootstrap 5)-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--end::Required Plugin(popperjs for Bootstrap 5)--><!--begin::Required Plugin(Bootstrap 5)-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--end::Required Plugin(Bootstrap 5)--><!--begin::Required Plugin(AdminLTE)-->
+    <script src="./js/adminlte.js"></script>
+    <!--end::Required Plugin(AdminLTE)--><!--begin::OverlayScrollbars Configure-->
+    <script>
+      const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
+      const Default = {
+        scrollbarTheme: 'os-theme-light',
+        scrollbarAutoHide: 'leave',
+        scrollbarClickScroll: true,
+      };
+      document.addEventListener('DOMContentLoaded', function () {
+        const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
+        if (sidebarWrapper && OverlayScrollbarsGlobal?.OverlayScrollbars !== undefined) {
+          OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
+            scrollbars: {
+              theme: Default.scrollbarTheme,
+              autoHide: Default.scrollbarAutoHide,
+              clickScroll: Default.scrollbarClickScroll,
+            },
+          });
+        }
+      });
+    </script>
+    <!--end::OverlayScrollbars Configure-->
+    <!-- OPTIONAL SCRIPTS -->
+    <!-- sortablejs -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- sortablejs -->
+    <script>
+      new Sortable(document.querySelector('.connectedSortable'), {
+        group: 'shared',
+        handle: '.card-header',
+      });
+
+      const cardHeaders = document.querySelectorAll('.connectedSortable .card-header');
+      cardHeaders.forEach((cardHeader) => {
+        cardHeader.style.cursor = 'move';
+      });
+    </script>
+<script>
+(async () => {
+    const topology = await fetch(
+        'https://code.highcharts.com/mapdata/countries/la/la-all.topo.json'
+    ).then(response => response.json());
+
+    const data = [
+        ['la-at', 10],  // Attapeu
+        ['la-bk', 20],  // Bokeo
+        ['la-bl', 30],  // Bolikhamxai
+        ['la-ch', 40],  // Champasak
+        ['la-ho', 50],  // Houaphanh
+        ['la-kh', 60],  // Khammouane
+        ['la-lm', 70],  // Luang Namtha
+        ['la-lp', 80],  // Luang Prabang
+        ['la-ou', 90],  // Oudomxay
+        ['la-ph', 100], // Phongsaly
+        ['la-sl', 110], // Salavan
+        ['la-sv', 120], // Savannakhet
+        ['la-vt', 130], // Vientiane Capital (Prefecture)
+        ['la-vi', 140], // Vientiane Province
+        ['la-xa', 150], // Sainyabuli
+        ['la-xe', 160], // Sekong
+        ['la-xi', 170], // Xiangkhouang
+        ['la-xs', 180], // Xiangkhouang
+    ];
+
+    Highcharts.mapChart('map-chart', {
+        chart: { map: topology },
+        title: { text: 'ລາຍຮັບອາກອນທົ່ວປະເທດ' },
+        mapNavigation: {
+            enabled: true,
+            buttonOptions: { verticalAlign: 'top' }
+        },
+        credits: { 
+          enabled: false
+        },
+        colorAxis: {
+                dataClasses: [
+                    {
+                        from: 0,
+                        to: 50,
+                        color: 'red',
+                        name:"<= 50% ທຽບແຜນ"
+                    },
+                    {
+                        from: 51,
+                        to: 80,
+                        color: 'orange',
+                        name:"51% - 80% ທຽບແຜນ"
+                    },
+                    {
+                        from: 81,
+                        to: 100,
+                        color: 'yellow',
+                        name:"81% - 100% ທຽບແຜນ"
+                    },
+                    {
+                        from: 101,
+                        color: 'green',
+                        name:"ເກີນແຜນ"
+                    },
+                ]
+            },
+            legend: {
+                align: 'left',
+                verticalAlign: 'bottom',
+                floating: true,
+                layout: 'vertical',
+                valueDecimals: 0,
+                backgroundColor: ( // theme
+                    Highcharts.defaultOptions &&
+                    Highcharts.defaultOptions.legend &&
+                    Highcharts.defaultOptions.legend.backgroundColor
+                ) || 'rgba(255, 255, 255, 0.85)'
+            },
+        series: [{
+            data: data,
+            name: 'Random data',
+            states: { hover: { color: '#039BE5' } },
+            dataLabels: { enabled: true, format: '{point.name}' }
+        }]
+    });
+})();
+
+
+
+
+Highcharts.chart('area-chart', {
+    chart: {
+        type: 'areaspline'
+    },
+
+    title: {
+        text: 'ລາຍຮັບອາກອນປະຈໍາປີ 2025'
+    },
+
+    credits: {
+        enabled: false
+    },
+
+    legend: {
+        align: 'right',
+        verticalAlign: 'middle',
+        layout: 'vertical'
+    },
+
+    xAxis: {
+        categories: [
+            'ມັງກອນ', 'ກຸມພາ', 'ມີນາ', 'ເມສາ', 'ພຶດສະພາ',
+            'ມິຖຸນາ', 'ກໍລະກົດ', 'ສິງຫາ', 'ກັນຍາ',
+            'ຕຸລາ', 'ພະຈິກ', 'ທັນວາ'
+        ],
+        labels: {
+            x: -10
+        }
+    },
+
+    yAxis: {
+        allowDecimals: false,
+        title: {
+            text: 'ລາຍຮັບ'
+        },
+        labels: {
+            formatter: function () {
+                if (this.value >= 1000000000000) {
+                    return (this.value / 1000000000000) + 'T'; 
+                } else if (this.value >= 1000000000) {
+                    return (this.value / 1000000000) + 'B'; 
+                } else if (this.value >= 1000000) {
+                    return (this.value / 1000000) + 'M'; 
+                } else if (this.value >= 1000) {
+                    return (this.value / 1000) + 'K'; 
+                }
+                return this.value;
+            }
+        }
+    },
+
+    series: [{
+        name: 'ແຜນເດືອນ',
+        data: [4000, 3500, 4500, 3700, 3800, 3600, 4000, 4200, 3900, 3800, 3700, 4000],
+        color: 'rgba(0,123,255,0.5)'
+    }, {
+        name: 'ປະຕິປັດ',
+        data: [8000, 3000, 5000, 4000, 4200, 3900, 5000, 4500, 0, 0, 0, 0],
+        color: 'rgba(0,0,0,0.6)'
+    }],
+
+    tooltip: {
+        useHTML: true,
+        headerFormat: '',
+        pointFormatter: function () {
+            const value = this.y;
+            return `${value ? '<br><span>' + Highcharts.numberFormat(value, 0, '.', ',') + ' ກີບ</span>' : ''}`;
+        },
+        style: {
+            fontFamily: 'Noto Sans Lao',
+            fontSize: '14'
+        }
+    },
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    align: 'center',
+                    verticalAlign: 'bottom',
+                    layout: 'horizontal'
+                },
+                yAxis: {
+                    labels: {
+                        align: 'left',
+                        x: 0,
+                        y: -5
+                    },
+                    title: {
+                        text: null
+                    }
+                },
+                subtitle: {
+                    text: null
+                },
+                credits: {
+                    enabled: false
+                }
+            }
+        }]
+    }
+});
+
+</script>
+
+
+
+<script>
+// Function to abbreviate numbers like your abbrNum
+function abbrNum(number, decPlaces) {
+    const abbrev = ["K", "M", "B", "T"];
+    decPlaces = Math.pow(10, decPlaces);
+    for (let i = abbrev.length - 1; i >= 0; i--) {
+        const size = Math.pow(10, (i + 1) * 3);
+        if (number >= size) {
+            return Math.round(number * decPlaces / size) / decPlaces + abbrev[i];
+        }
+    }
+    return number;
+}
+
+Highcharts.chart('treemap-container', {
+    chart: {
+        type: 'treemap'
+    },
+    title: {
+        text: 'ສັດສ່ວນລາຍຮັບ - ແຍກປະເພດ'
+    },
+    credits: { enabled: false },
+    exporting: { enabled: true }, // allow download as SVG/PNG/PDF
+    tooltip: {
+        useHTML: true,
+        headerFormat: '',
+        pointFormatter: function () {
+            return `
+                <span>${this.name}</span>
+                ${this.value ? '<br><span>' + abbrNum(this.value, 2) + ' ກີບ</span>' : ''}
+            `;
+        },
+        style: {
+            fontFamily: 'Noto Sans Lao',
+            fontSize: '14px'
+        }
+    },
+    series: [{
+        name: 'ລາຍຮັບ',
+        allowTraversingTree: true,
+        layoutAlgorithm: 'squarified',
+        data: [
+            { id: 'A', name: 'ພາກເໜືອ', color: '#50FFB1' },
+            { id: 'B', name: 'ພາກກາງ', color: '#F5FBEF' },
+            { id: 'C', name: 'ພາກຕາເວັນຕົກ', color: '#A09FA8' },
+            { id: 'D', name: 'ພາກຕາເວັນອອກ', color: '#E7ECEF' },
+            { id: 'E', name: 'ພາກໃຕ້', color: '#A9B4C2' },
+            { name: 'ຫຼວງນ້ຳທາ', parent: 'A', value: 70923 },
+            { name: 'ເໜືອລຳດາ', parent: 'A', value: 35759 },
+            { name: 'ກາງລຳດາ', parent: 'B', value: 39494 },
+            { name: 'ຕາເວັນຕົກລຳດາ', parent: 'C', value: 13840 },
+            { name: 'ຕາເວັນຕົກຕາກ', parent: 'C', value: 31969 },
+            { name: 'ວຽງຈັນ', parent: 'C', value: 8576 },
+            { name: 'ຕາເວັນອອກລຳດາ', parent: 'D', value: 22768 },
+            { name: 'ອິນແລນ', parent: 'D', value: 49391 },
+            { name: 'ວຽງຈັນ', parent: 'D', value: 454 },
+            { name: 'ຕາເວັນອອກເທີ້ອ', parent: 'D', value: 15925 },
+            { name: 'ຕາເວັນໃຕ້', parent: 'E', value: 14981 }
+        ],
+        levels: [{
+            level: 1,
+            dataLabels: { enabled: true, style: { fontSize: '14px', color: 'black' } },
+            borderWidth: 3
+        }, {
+            level: 2,
+            dataLabels: { enabled: true, style: { fontSize: '12px', color: 'white' } }
+        }]
+    }]
+});
+</script>
+    <!-- jsvectormap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/js/jsvectormap.min.js"
+      integrity="sha256-/t1nN2956BT869E6H4V1dnt0X5pAQHPytli+1nTZm2Y="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/maps/world.js"
+      integrity="sha256-XPpPaZlU8S/HWf7FZLAncLg2SAkP8ScUTII89x9D3lY="
+      crossorigin="anonymous"
+    ></script>
+    
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Include Select2 CSS + JS -->
+  
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.10.0/js/bootstrap-datepicker.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    
+    $('.mySelect').select2({
+      allowclear: true,
+      width: '100%',
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function () {
+    $('.summary-block').each(function () {
+      const $block = $(this);
+      const $summary = $block.find('.summary');
+      if ($block.find('.toggle-summary').is(':checked')) {
+        $summary.hide();
+      }
+      $block.find('.toggle-detail').on('change', function () {
+        if ($(this).is(':checked')) {
+          $summary.show();
+        }
+      });
+      $block.find('.toggle-summary').on('change', function () {
+        if ($(this).is(':checked')) {
+          $summary.hide();
+        }
+      });
+    });
+
+    $('.card-title').on('click', function () {
+      if ($(this).attr('style')?.includes('cursor: pointer')) {
+        $(this).closest('.card').find('.card-body .row').slideToggle(100);
+      }
+    });
+  });
+</script>
+<script>
+  $(function () {
+    $('.datepicker').datepicker({
+      format: 'dd/mm/yyyy',
+      autoclose: true,     
+      todayHighlight: true, 
+      todayBtn: 'linked',    
+      clearBtn: true,
+    });
+  });
+</script>
+
+  </body>
+  <!--end::Body-->
+</html>

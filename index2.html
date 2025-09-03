@@ -1,0 +1,887 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MOF iReport</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#007bff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
+    <meta name="title" content="AdminLTE v4 | Dashboard" />
+    <meta name="author" content="ColorlibHQ" />
+    <meta name="description" content="AdminLTE is a Free Bootstrap 5 Admin Dashboard, 30 example pages using Vanilla JS. Fully accessible with WCAG 2.1 AA compliance."/>
+    <meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, colorlibhq, colorlibhq dashboard, colorlibhq admin dashboard, accessible admin panel, WCAG compliant"/>
+    <meta name="supported-color-schemes" content="light dark" />
+    <link rel="preload" href="./css/adminlte.css" as="style" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/themes/dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css" integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q=" crossorigin="anonymous" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/styles/overlayscrollbars.min.css" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./css/adminlte.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.css" integrity="sha256-4MX+61mt9NVvvuPjUWdUdyfZfxSB1/Rf9WtqRHgG5S0=" crossorigin="anonymous"/>
+    <!-- jsvectormap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css" integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4=" crossorigin="anonymous"/>
+  </head>
+
+<body class="layout-fixed sidebar-expand-lg sidebar-open bg-body-tertiary">
+    <div class="app-wrapper">
+      <nav class="app-header navbar navbar-expand bg-body">
+        <div class="container-fluid">
+          <ul class="navbar-nav" style="width:100%">
+            <li class="nav-item">
+              <a class="nav-link d-flex justify-content-center align-items-center text-white" data-lte-toggle="sidebar" href="#" role="button">
+                <i class="bi bi-list fs-4"></i>
+              </a>
+            </li>
+            <li class="d-none d-md-block" style="width:85%; display:flex; align-items:center; justify-content:center;">
+              <p class="marquee mb-0">
+                <span>ລະບົບສະຫຼຸບການຈັດຕັ້ງປະຕິບັດແຜນງົບປະມານແຫ່ງລັດ</span>
+              </p>
+            </li>
+          <ul class="navbar-nav ms-auto" >
+            <!--begin::User Menu Dropdown-->
+            <li class="nav-item dropdown user-menu">
+              <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                <img src="./assets/img/user2-160x160.jpg" class="user-image rounded-circle shadow" alt="User Image"/>
+                <span class="d-none d-md-inline text-white">Alexander Pierce</span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end float-end">
+                <!--begin::User Image-->
+                <li class="user-header text-bg-primary">
+                  <img src="./assets/img/user2-160x160.jpg" class="rounded-circle shadow" alt="User Image"/>
+                  <p> Alexander Pierce - Web Developer<small>Member since Nov. 2023</small></p>
+                </li>
+                <!--end::User Image-->
+                
+                <!--begin::Menu Footer-->
+                <li class="user-footer">
+                  <a href="change-password.html" class="btn btn-default btn-flat">Change Password</a>
+                  <a href="#" class="btn btn-danger btn-flat float-end">Sign out</a>
+                </li>
+                <!--end::Menu Footer-->
+              </ul>
+            </li>
+            <!--end::User Menu Dropdown-->
+          </ul>
+          <!--end::End Navbar Links-->
+        </div>
+        <!--end::Container-->
+      </nav>
+      <!--end::Header-->
+      <!--begin::Sidebar-->
+      <aside class="app-sidebar bg-body-secondary " data-bs-theme="dark">
+        <!--begin::Sidebar Brand-->
+        <div class="sidebar-brand">
+          <!--begin::Brand Link-->
+          <a href="./index.html" class="brand-link">
+            <!--begin::Brand Image-->
+            <img src="./assets/img/lao_logo.png" alt="loa logo" class="brand-image"/>
+            <!--end::Brand Image-->
+          </a>
+          <!--end::Brand Link-->
+        </div>
+        <!--end::Sidebar Brand-->
+        <!--begin::Sidebar Wrapper-->
+        <div class="sidebar-wrapper">
+          <nav class="mt-2">
+            <!--begin::Sidebar Menu-->
+            <ul
+              class="nav sidebar-menu flex-column"
+              data-lte-toggle="treeview"
+              role="navigation"
+              aria-label="Main navigation"
+              data-accordion="false"
+              id="navigation"
+            >
+              <li class="nav-item menu-open">
+                <a href="#" class="nav-link active">
+                 <i class="nav-icon fa-solid fa-house"></i>
+                  <p>
+                    Dashboard
+                    <i class="nav-arrow gy-4 bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="./index.html" class="nav-link ">
+                      <i class="nav-icon fa-solid fa-bullseye"></i>
+                      <p>ສະພາບການເກັບລາຍຮັບ</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index2.html" class="nav-link active">
+                      <i class="nav-icon fa-solid fa-file"></i>
+                      <p>ສະຫຼຸບການຈັດຕັ້ງປະຕິບັດ</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="./index3.html" class="nav-link">
+                      <i class=" nav-icon fa-solid fa-paper-plane"></i>
+                      <p>ຄ່າທໍານຽມທາງ</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              
+            </ul>
+            <!--end::Sidebar Menu-->
+          </nav>
+        </div>
+        <!--end::Sidebar Wrapper-->
+      </aside>
+      <!--end::Sidebar-->
+      <!--begin::App Main-->
+      <main class="app-main">
+        <!--begin::App Content Header-->
+        <div class="app-content-header">
+          <!--begin::Container-->
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12 col-lg-2">
+                <select class="form-select select2 mySelect" >
+                  <option value="1">2021</option>
+                  <option value="2">2022</option>
+                  <option value="3">2023</option>
+                  <option value="4">2024</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!--end::Container-->
+        </div>
+
+        <div class="app-content">
+          <div class="container-fluid">
+            <span class="text-danger fw-bold">ໝາຍເຫດ:</span>
+            <div class="card summary-block p-3">
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="ps-2 pb-2 text-primary fw-bold">ລາຍຮັບ</div>
+                <div class="btn-group ps-2 pb-2 text-primary fw-bold" role="group">
+                  <input type="radio" class="btn-check toggle-summary" name="toggle-2" id="summary-2" checked>
+                  <label class="btn btn-outline-primary" for="summary-2">ສະຫຼຸບ</label>
+
+                  <input type="radio" class="btn-check toggle-detail" name="toggle-2" id="detail-2">
+                  <label class="btn btn-outline-primary" for="detail-2">ລະອຽດ</label>
+                </div>
+              </div>
+              <div class="card  mt-3" >
+                <div class="card-header">
+                  <h3 class="card-title " >ລາຍຮັບທັງໝົດ</h3>
+                </div>
+                <div class="card-body">
+                  <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-danger">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h5 class="p-0 m-0 text-end">65</h5>
+                            <p class="p-0 m-0 text-end fs-6"> ແຜນປະຈໍາປີ </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-primary">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-diagram-3-fill fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h5 class="p-0 m-0 text-end">65,607,079,797,070 $</h5>
+                            <p class="p-0 m-0 text-end fs-6"> ປະຕິບັດ </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-success">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h5 class="p-0 m-0 text-end">0.00%</h5>
+                            <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                      <div class="card p-2 rounded-3 text-bg-warning">
+                        <div class="inner d-flex justify-content-between align-items-center py-3">
+                          <div><i class="bi bi-cart-fill fs-1 opacity-25 text-black"></i></div>
+                          <div>
+                            <h5 class="p-0 m-0 text-end">0.00%</h5>
+                            <p class="p-0 m-0 text-end fs-6"> ທຽບ GDP </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="summary">
+                <div class="card  mt-3">
+                  <div class="card-header bg-body-secondary p-2">
+                    <h3 class="card-title " style="cursor: pointer;">ລາຍຮັບພາຍໃນ</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-4" style="display: none;">
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-danger">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">65</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ແຜນປະຈໍາປີ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-info">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                            <div class="text-light">
+                              <h5 class="p-0 m-0 text-end">650,607,079,797,079,797 $</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ປະຕິບັດ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-primary">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">0.00%</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card mt-3" >
+                  <div class="card-header bg-body-secondary p-2">
+                    <h3 class="card-title " style="cursor: pointer;">ລາຍຮັບຈາກການຊ່ວຍເຫຼືອລ້າ</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-4" style="display: none;">
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-danger">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">65</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ແຜນປະຈໍາປີ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-info">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                            <div class="text-light">
+                              <h5 class="p-0 m-0 text-end">650,607,079,797,079,797 $</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ປະຕິບັດ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-primary">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">0.00%</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>  
+                <div class="card  mt-3" >
+                  <div class="card-header bg-body-secondary p-2">
+                    <h3 class="card-title " style="cursor: pointer;">ລາຍຮັບປະກອບສ່ວນຈາກສັງຄົມ</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-4" style="display: none;">
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-danger">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">65</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ແຜນປະຈໍາປີ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-info">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                            <div class="text-light">
+                              <h5 class="p-0 m-0 text-end">650,607,079,797,079,797 $</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ປະຕິບັດ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-primary">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">0.00%</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card summary-block p-3 mt-3">
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="ps-2 pb-2 text-primary fw-bold">ລາຍຈ່າຍ</div>
+                <div class="btn-group ps-2 pb-2 text-primary fw-bold" role="group">
+                  <input type="radio" class="btn-check toggle-summary" name="toggle-1" id="summary-1" checked>
+                  <label class="btn btn-outline-primary" for="summary-1">ສະຫຼຸບ</label>
+
+                  <input type="radio" class="btn-check toggle-detail" name="toggle-1" id="detail-1">
+                  <label class="btn btn-outline-primary" for="detail-1">ລະອຽດ</label>
+                </div>
+              </div>
+              <div class="card  mt-3" >
+                <div class="card-header">
+                  <h3 class="card-title " >ລາຍຈ່າຍທັງໝົດ</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row g-4">
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-danger">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">65</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ແຜນປະຈໍາປີ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-info">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                            <div class="text-light">
+                              <h5 class="p-0 m-0 text-end">650,607,079,797,079,797 $</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ປະຕິບັດ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-primary">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">0.00%</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+              </div>
+              <div class="summary">
+                <div class="card  mt-3">
+                  <div class="card-header bg-body-secondary p-2">
+                    <h3 class="card-title " style="cursor: pointer;">ລາຍຈ່າຍບໍລິຫານປົກກະຕິ</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-4" style="display: none;">
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-danger">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">65</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ແຜນປະຈໍາປີ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-info">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                            <div class="text-light">
+                              <h5 class="p-0 m-0 text-end">650,607,079,797,079,797 $</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ປະຕິບັດ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-primary">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">0.00%</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card mt-3" >
+                  <div class="card-header bg-body-secondary p-2">
+                    <h3 class="card-title " style="cursor: pointer;">ລົງທຶນພາຍໃນ ແລະ ຕ່າງປະເທດ</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-4" style="display: none;">
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-danger">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">65</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ແຜນປະຈໍາປີ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-info">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                            <div class="text-light">
+                              <h5 class="p-0 m-0 text-end">650,607,079,797,079,797 $</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ປະຕິບັດ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-primary">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">0.00%</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>  
+              </div>
+            </div>
+            <div class="card  p-3 mt-3">
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="ps-2 pb-2 text-primary fw-bold"> ດຸ່ນດ່ຽງ (ລາຍຮັບ - ລາຍຈ່າຍ)</div>
+              </div>
+              <div class="card  mt-3" >
+                <div class="card-header">
+                  <h3 class="card-title " >ທັງໝົດ</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row g-4">
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-danger">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">65</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ແຜນປະຈໍາປີ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-info">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                            <div class="text-light">
+                              <h5 class="p-0 m-0 text-end">650,607,079,797,079,797 $</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ປະຕິບັດ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-primary">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">0.00%</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="card summary-block p-3 mt-3">
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="ps-2 pb-2 text-primary fw-bold">ພາກການດຸ່ນດ່ຽງ</div>
+                <div class="btn-group ps-2 pb-2 text-primary fw-bold" role="group">
+                  <input type="radio" class="btn-check toggle-summary" name="toggle-3" id="summary-3" checked>
+                  <label class="btn btn-outline-primary" for="summary-3">ສະຫຼຸບ</label>
+
+                  <input type="radio" class="btn-check toggle-detail" name="toggle-3" id="detail-3">
+                  <label class="btn btn-outline-primary" for="detail-3">ລະອຽດ</label>
+                </div>
+              </div>
+              <div class="card  mt-3" >
+                <div class="card-header">
+                  <h3 class="card-title " >ທັງໝົດ</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row g-4">
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-danger">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">65</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ແຜນປະຈໍາປີ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-info">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                            <div class="text-light">
+                              <h5 class="p-0 m-0 text-end">650,607,079,797,079,797 $</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ປະຕິບັດ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-primary">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">0.00%</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+              </div>
+              <div class="summary">
+                <div class="card  mt-3">
+                  <div class="card-header bg-body-secondary p-2">
+                    <h3 class="card-title " style="cursor: pointer;">ການທົດແທນຄືນຕົ້ນທຶນເງິນກູ້ຢືມ</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-4" style="display: none;">
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-danger">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">65</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ແຜນປະຈໍາປີ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-info">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                            <div class="text-light">
+                              <h5 class="p-0 m-0 text-end">650,607,079,797,079,797 $</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ປະຕິບັດ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-primary">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">0.00%</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card mt-3" >
+                  <div class="card-header bg-body-secondary p-2">
+                    <h3 class="card-title " style="cursor: pointer;">ແຫຼ່ງທຶນເພື່ອມາດຸ່ນດ່ຽງ</h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="row g-4" style="display: none;">
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-danger">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">65</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ແຜນປະຈໍາປີ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-info">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                            <div class="text-light">
+                              <h5 class="p-0 m-0 text-end">650,607,079,797,079,797 $</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ປະຕິບັດ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-primary">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">0.00%</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>  
+              </div>
+            </div>
+            <div class="card  p-3 mt-3">
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="ps-2 pb-2 text-primary fw-bold"> ຍອດເຫຼືອງົບປະມານ </div>
+              </div>
+              <div class="card  mt-3" >
+                <div class="card-header">
+                  <h3 class="card-title " >ທັງໝົດ</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row g-4">
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-danger">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">65</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ແຜນປະຈໍາປີ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-info">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                            <div class="text-light">
+                              <h5 class="p-0 m-0 text-end">650,607,079,797,079,797 $</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ປະຕິບັດ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-primary">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">0.00%</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="card  p-3 mt-3">
+              <div class="d-flex justify-content-start align-items-center">
+                <div class="ps-2 pb-2 text-primary fw-bold">GDP</div>
+              </div>
+              <div class="card  mt-3" >
+                <div class="card-header">
+                  <h3 class="card-title " >ທັງໝົດ</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row g-4">
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-danger">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-pie-chart-fill fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">65</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ແຜນປະຈໍາປີ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-info">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-hash fs-1 opacity-25 text-black"></i></div>
+                            <div class="text-light">
+                              <h5 class="p-0 m-0 text-end">650,607,079,797,079,797 $</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ປະຕິບັດ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-lg-4 col-12">
+                        <div class="card p-2 rounded-3 text-bg-primary">
+                          <div class="inner d-flex justify-content-between align-items-center py-3">
+                            <div><i class="bi bi-globe-asia-australia fs-1 opacity-25 text-black"></i></div>
+                            <div>
+                              <h5 class="p-0 m-0 text-end">0.00%</h5>
+                              <p class="p-0 m-0 text-end fs-6"> ທຽບໃສ່ແຜນການ </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.11.0/browser/overlayscrollbars.browser.es6.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="./js/adminlte.js"></script>
+    <script>
+      const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
+      const Default = {
+        scrollbarTheme: 'os-theme-light',
+        scrollbarAutoHide: 'leave',
+        scrollbarClickScroll: true,
+      };
+      document.addEventListener('DOMContentLoaded', function () {
+        const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
+        if (sidebarWrapper && OverlayScrollbarsGlobal?.OverlayScrollbars !== undefined) {
+          OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
+            scrollbars: {
+              theme: Default.scrollbarTheme,
+              autoHide: Default.scrollbarAutoHide,
+              clickScroll: Default.scrollbarClickScroll,
+            },
+          });
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <script>
+      new Sortable(document.querySelector('.connectedSortable'), {
+        group: 'shared',
+        handle: '.card-header',
+      });
+
+      const cardHeaders = document.querySelectorAll('.connectedSortable .card-header');
+      cardHeaders.forEach((cardHeader) => {
+        cardHeader.style.cursor = 'move';
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Include Select2 CSS + JS -->
+  
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script>
+    $(document).ready(function() {
+        $('.mySelect').select2({
+          allowclear: true,
+          width: '100%',
+        });
+
+
+
+      $('.summary-block').each(function () {
+        const $block = $(this);
+        const $summary = $block.find('.summary');
+        if ($block.find('.toggle-summary').is(':checked')) {
+          $summary.hide();
+        }
+        $block.find('.toggle-detail').on('change', function () {
+          if ($(this).is(':checked')) {
+            $summary.show();
+          }
+        });
+        $block.find('.toggle-summary').on('change', function () {
+          if ($(this).is(':checked')) {
+            $summary.hide();
+          }
+        });
+      });
+
+      $('.card-title').on('click', function () {
+        if ($(this).attr('style')?.includes('cursor: pointer')) {
+          $(this).closest('.card').find('.card-body .row').slideToggle(100);
+        }
+      });
+    });
+  </script>
+  <!-- <script>
+    const dateInput = document.getElementById('myDate');
+    dateInput.addEventListener('click', () => {
+      dateInput.showPicker(); // this opens the calendar programmatically
+    });
+  </script> -->
+</body>
+</html>
